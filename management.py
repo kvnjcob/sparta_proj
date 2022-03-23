@@ -1,5 +1,6 @@
 from spartan import Spartan
 import json
+from flask import request
 
 all_spartans = {}
 
@@ -69,3 +70,19 @@ def remove_spartan(sparta_id):
         return f"Id does not exist in file"
 
 
+def add_spartan_to_db():
+    global all_spartans
+
+    load_from_json()
+
+    spartan_details = request.get_json()
+
+    spartan_f_n = spartan_details["first_name"]
+    spartan_l_n = spartan_details["last_name"]
+    spartan_e_id = spartan_details["emp_id"]
+
+    spartan_temp = Spartan(spartan_f_n, spartan_l_n, spartan_e_id)
+
+    all_spartans[spartan_temp.get_emp_id()] = spartan_temp
+
+    save_to_json()

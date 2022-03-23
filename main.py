@@ -12,12 +12,8 @@ def index_page():
 
 @app.route("/spartan/add", methods=["POST"])
 def add_spartan():
-    spartan_data = request.json
-    f_n = spartan_data["first_name"]
-    l_n = spartan_data["last_name"]
-    e_id = spartan_data["emp_id"]
-
-    return f"{f_n} {l_n} has ID : {e_id}"
+    management.add_spartan_to_db()
+    return f"the details are added to the database"
 
 
 @app.route("/spartan/<spartan_id>", methods=["GET"])
