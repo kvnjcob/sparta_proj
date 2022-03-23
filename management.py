@@ -36,8 +36,13 @@ def load_from_json():
         first_nm = temp_dict[key]["first_name"]
         last_nm = temp_dict[key]["last_name"]
         emp_id = temp_dict[key]["emp_id"]
+        birth_yr = temp_dict[key]["birth_year"]
+        birth_mn = temp_dict[key]["birth_month"]
+        birth_dy = temp_dict[key]["birth_day"]
+        course = temp_dict[key]["course"]
+        stream = temp_dict[key]["stream"]
 
-        temp_spartan = Spartan(first_nm, last_nm, emp_id)
+        temp_spartan = Spartan(first_nm, last_nm, emp_id, birth_yr, birth_mn, birth_dy, course, stream)
 
         all_spartans[emp_id] = temp_spartan
     return f"data loaded"
@@ -80,8 +85,14 @@ def add_spartan_to_db():
     spartan_f_n = spartan_details["first_name"]
     spartan_l_n = spartan_details["last_name"]
     spartan_e_id = spartan_details["emp_id"]
+    spartan_byr = spartan_details["birth_year"]
+    spartan_bmn = spartan_details["birth_month"]
+    spartan_bdy = spartan_details["birth_day"]
+    spartan_crse = spartan_details["course"]
+    spartan_strm = spartan_details["stream"]
 
-    spartan_temp = Spartan(spartan_f_n, spartan_l_n, spartan_e_id)
+    spartan_temp = Spartan(spartan_f_n, spartan_l_n, spartan_e_id, spartan_byr, spartan_bmn, spartan_bdy, spartan_crse,
+                           spartan_strm)
 
     all_spartans[spartan_temp.get_emp_id()] = spartan_temp
 

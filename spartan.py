@@ -1,13 +1,13 @@
 class Spartan:
 
-    def __init__(self, f_name, l_name, e_id):
+    def __init__(self, f_name, l_name, e_id, birth_year, birth_month, birth_day, course, stream):
         self.first_name = f_name
         self.last_name = l_name
-        # self.birth_year = birth_year
-        # self.birth_month = birth_month
-        # self.birth_day = birth_day
-        # self.course = course
-        # self.stream = stream
+        self.birth_year = birth_year
+        self.birth_month = birth_month
+        self.birth_day = birth_day
+        self.course = course
+        self.stream = stream
         self.emp_id = e_id
 
     def get_first_name(self):
@@ -60,7 +60,7 @@ class Spartan:
 
 
 if __name__ == "__main__":
-    new_spartan = Spartan("Kevin", "Jacob", 1)
+    new_spartan = Spartan("Kevin", "Jacob", 1, 1991, 12, 8, "Devops", "Computer")
     spartan_dict = vars(new_spartan)
 
     print(spartan_dict)
