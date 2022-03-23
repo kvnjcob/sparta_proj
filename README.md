@@ -39,10 +39,10 @@ The following functionalities (and routes are expected to be implemented)
 
 
 Working Methodology:
-1-  Start by creating a new git repository (spartan_project)	-done
-2-  Create a new pycharm project and link it to the repository that you created.	-done
-3-  Use commit after each step from now on	
-4-  Start by creating all the routes (at this stage they will only be returning strings to show that they are working)
-5-  Create the Class and test (locally) that you can create an object from the class
+1 done-  Start by creating a new git repository (spartan_project)	-done
+2 done-  Create a new pycharm project and link it to the repository that you created.	-done
+3 done-  Use commit after each step from now on	
+4 done-  Start by creating all the routes (at this stage they will only be returning strings to show that they are working)
+5 done-  Create the Class and test (locally) that you can create an object from the class
 6-  Create a file called management.py and use it to add all the functions that will manage the sprtans		-done
 7-  Use Postman to test your code: create new collection and create a new request for each API that you are testing
